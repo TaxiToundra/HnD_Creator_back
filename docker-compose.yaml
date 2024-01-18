@@ -1,0 +1,29 @@
+services:
+  mysql:
+    image: mysql
+    container_name: container_mysql
+    ports:
+      - '3307:3306'
+    expose:
+      - '3307'
+    environment:
+      MYSQL_ROOT_PASSWORD: mysqldevpassword
+
+#  keycloak:
+#    image: jboss/keycloak:11.0.2
+#    container_name: container_keycloak
+#    ports:
+#      - 8080:8080
+#    environment:
+##      - KEYCLOAK_USER=admin
+##      - KEYCLOAK_PASSWORD=admin
+#      - DB_VENDOR=mysql
+#      - DB_ADDR=mysql
+#      - DB_DATABASE=keycloak
+#      - DB_USER=keycloak
+#      - DB_PASSWORD=keycloak
+#    depends_on:
+#      - mysql
+
+volumes:
+  mysql:
