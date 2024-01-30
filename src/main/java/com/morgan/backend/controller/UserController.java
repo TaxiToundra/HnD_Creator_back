@@ -13,10 +13,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    @PostMapping("")
-    public void createUser(@RequestBody UserDTO user) throws Exception {
-        userService.create(user);
-    }
 
     @GetMapping("")
     public List<UserDTO> getAllUsers(){

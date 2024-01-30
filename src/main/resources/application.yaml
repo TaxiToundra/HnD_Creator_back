@@ -10,3 +10,10 @@ spring:
     generate-ddl: true
   liquibase:
     enabled: false
+  security:
+    user:
+      name: HnD_Creator
+      password: password
+
+env:
+  jwt-secret-key: ${{ secrets.JWT_SECRET_KEY }}
